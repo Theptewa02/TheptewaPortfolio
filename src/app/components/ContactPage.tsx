@@ -1,0 +1,20 @@
+import SectionWrapper from "./SectionWrapper";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+
+export default function ContactPage() {
+  return (
+    <SectionWrapper>
+      <div className="max-w-xl w-full text-center">
+        <h2 className="text-3xl font-bold mb-6">ติดต่อ</h2>
+        <form className="space-y-4">
+          <Input placeholder="ชื่อของคุณ" />
+          <Input type="email" placeholder="อีเมล" />
+          <Textarea placeholder="ข้อความ..." />
+          <Button type="submit" className="w-full">ส่งข้อความ</Button>
+        </form>
+      </div>
+    </SectionWrapper>
+  );
+}
