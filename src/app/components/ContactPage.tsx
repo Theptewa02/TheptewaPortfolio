@@ -7,7 +7,7 @@ export default function ContactPage() {
   return (
     <SectionWrapper>
       <div className="max-w-xl w-full text-center">
-        <h2 className="text-3xl font-bold mb-6">ติดต่อ</h2>
+        <h2 className="text-3xl font-bold mb-6">ช่องทางติดต่อ | Contact</h2>
         <form className="space-y-4">
           <Input placeholder="ชื่อของคุณ" />
           <Input type="email" placeholder="อีเมล" />
