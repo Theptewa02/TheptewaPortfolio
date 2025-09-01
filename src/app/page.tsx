@@ -13,5 +13,13 @@ export default function Page() {
       <div id="projects" className="snap-start"><ProjectPage /></div>
       <div id="contact" className="snap-start"><ContactPage /></div>
     </main>
+
+    // <main className="overflow-y-scroll h-screen">
+    //   <div id="home"><HomePage /></div>
+    //   <div id="education"><EducationPage /></div>
+    //   <div id="skills"><SkillsPage /></div>
+    //   <div id="projects"><ProjectPage /></div>
+    //   <div id="contact"><ContactPage /></div>
+    // </main>
   );
 }

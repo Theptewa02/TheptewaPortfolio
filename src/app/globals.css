@@ -3,7 +3,7 @@
 
 body {
   font-family: var(--font-bai-jamjuree), sans-serif;
-  @apply bg-gradient-to-b from-blue-100 to-purple-100;
+  @apply bg-blue-100;
 }
 
 @custom-variant dark (&:is(.dark *));
@@ -123,4 +123,14 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  animation: marquee 20s linear infinite;
 }
