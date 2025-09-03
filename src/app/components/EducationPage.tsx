@@ -24,7 +24,7 @@ export default function EducationPage() {
   return (
     <SectionWrapper>
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold mb-12 text-center">ประวัติการศึกษา | Education</h2>
+        <h2 className="text-4xl font-extrabold mb-12 text-center">ประวัติการศึกษา | Education</h2>
 
         <div className="space-y-12">
           {education.map((edu, index) => (
