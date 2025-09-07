@@ -9,7 +9,7 @@ export default function EducationPage() {
       education: "ปริญญาตรี",
       branch: "คณะบริหาธุรกิจ สาขาระบบสารสนเทศ",
       gpa: 3.16,
-      logo: "/images/rmutk.png",
+      logo: "/images/education_picture/rmutk.png",
     },
     {
       year: "2561 - 2564",
@@ -17,7 +17,7 @@ export default function EducationPage() {
       education: "ประกาศนียบัตรวิชาชีพ (ปวช.)",
       branch: "สาขาคอมพิวเตอร์ธุรกิจ",
       gpa: 3.37,
-      logo: "/images/chetupon.png",
+      logo: "/images/education_picture/chetupon.png",
     },
   ];
 

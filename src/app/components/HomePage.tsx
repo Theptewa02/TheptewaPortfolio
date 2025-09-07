@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import SectionWrapper from "./SectionWrapper";
+import GlowBorder from "@/components/GlowBorder";
 
 export default function HomePage() {
   return (
@@ -23,6 +26,27 @@ export default function HomePage() {
             Stack Developer อย่างเต็มศักยภาพ
           </p>
         </div>
+
+        {/* <GlowBorder>
+          <div className="space-y-4 text-center md:text-left max-w-xl">
+            <h1 className="text-4xl font-bold">สวัสดีครับ</h1>
+            <h1 className="text-4xl font-bold">ผม เทพเทวา พุทธชาติ</h1>
+            <h1 className="text-2xl text-gray-600">อยากสมัครงานในตำแหน่ง</h1>
+            <h2 className="text-2xl font-semibold text-blue-600">
+              Full Stack Developer | Software Developer
+            </h2>
+            <p className="text-muted-foreground text-[16px] leading-relaxed text-justify indent-6">
+              ผมเป็นนักศึกษาจบใหม่ มีความชื่นชอบในการทำงานสายโปรแกรมเมอร์
+              ชื่นชอบการ เขียนโค้ด การคิดเชิงตรรกะ
+              และการออกแบบระบบให้ทำงานได้อย่างถูกต้อง
+            </p>
+            <p className="text-muted-foreground text-[16px] leading-relaxed text-justify indent-6">
+              มีประสบการณ์ฝึกงานด้าน Backend และกำลังศึกษาเทคโนโลยีฝั่ง Frontend
+              ด้วยตัวเอง เพื่อเสริมทักษะและเตรียมพร้อมสู่การทำงานในตำแหน่ง Full
+              Stack Developer อย่างเต็มศักยภาพ
+            </p>
+          </div>
+        </GlowBorder> */}
 
         {/* ด้านขวา: รูปภาพ (วงกลม) */}
         <div className="flex justify-center md:justify-end">
