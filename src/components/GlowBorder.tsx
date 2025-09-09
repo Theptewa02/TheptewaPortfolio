@@ -1,7 +1,7 @@
 type GlowBorderProps = {
   children: React.ReactNode;
   className?: string;
-  colors?: string[];  // ใส่ชุดสีที่อยากใช้
+  colors?: string[];
 };
 
 export default function GlowBorder({ children, className = "", colors }: GlowBorderProps) {

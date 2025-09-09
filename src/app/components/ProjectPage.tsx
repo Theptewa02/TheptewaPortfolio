@@ -1,12 +1,14 @@
 "use client";
 
 import SectionWrapper from "./SectionWrapper";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import GlowBorder from "../../components/GlowBorder";
+
+import GlowBorder from "@/components/GlowBorder";
 
 const projectImages = [
   "/images/projects_picture/project-1.jpg",

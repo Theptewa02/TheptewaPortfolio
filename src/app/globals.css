@@ -3,7 +3,7 @@
 
 body {
   font-family: var(--font-bai-jamjuree), sans-serif;
-  @apply bg-gray-800;
+  @apply bg-slate-800;
 }
 
 @custom-variant dark (&:is(.dark *));
@@ -116,11 +116,33 @@ body {
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-@layer base {
+/* @layer base {
   * {
     @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;
   }
+} */
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes rotate {
+  from { --angle: 0deg; }
+  to { --angle: 360deg; }
+}
+
+.glow-text {
+  position: relative;
+  display: block;
+  font-weight: 800;
+  color: transparent;
+  background: conic-gradient(from var(--angle), #2b7fff, #00bcff, #53eafd, #00bcff, #2b7fff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: rotate 3s linear infinite;
 }

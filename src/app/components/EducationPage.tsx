@@ -1,5 +1,9 @@
+"use client";
+
 import SectionWrapper from "./SectionWrapper";
 import Image from "next/image";
+
+import GlowBorder from "@/components/GlowBorder";
 
 export default function EducationPage() {
   const education = [
@@ -23,8 +27,15 @@ export default function EducationPage() {
 
   return (
     <SectionWrapper>
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-extrabold mb-12 text-center">ประวัติการศึกษา | Education</h2>
+      <div className="max-w-full mx-auto">
+        <div>
+          <h2 className="glow-text text-8xl uppercase mb-2 text-center">
+            Education
+          </h2>
+          <h2 className="text-5xl font-bold text-sky-600 mb-12 text-center border-t-4 pt-4">
+            ประวัติการศึกษา
+          </h2>
+        </div>
 
         <div className="space-y-12">
           {education.map((edu, index) => (
@@ -34,28 +45,30 @@ export default function EducationPage() {
                 index % 2 === 1 ? "md:flex-row-reverse" : ""
               }`}
             >
-              {/* โลโก้ */}
               <div className="w-40 h-40 flex-shrink-0">
-                <Image
-                  src={edu.logo}
-                  alt={edu.place}
-                  width={200}
-                  height={200}
-                  className="rounded-full object-cover bg-white"
-                />
+                <GlowBorder
+                  className="p-[4px] rounded-full inline-block [&>div]:rounded-full [&>div:last-child]:bg-transparent [&>div:last-child]:p-0"
+                >
+                  <Image
+                    src={edu.logo}
+                    alt={edu.place}
+                    width={200}
+                    height={200}
+                    className="rounded-full object-cover bg-white"
+                  />
+                </GlowBorder>
               </div>
 
-              {/* รายละเอียด */}
               <div className="text-center md:text-left space-y-2">
-                <span className="text-sm font-medium text-gray-500">
+                <span className="text-md font-bold text-sky-400">
                   {edu.year}
                 </span>
-                <h3 className="text-xl font-bold">{edu.place}</h3>
-                <p className="text-gray-700 dark:text-gray-300">
+                <h3 className="text-xl font-bold text-sky-400">{edu.place}</h3>
+                <p className="text-lg text-slate-200">
                   {edu.education} - {edu.branch}
                 </p>
                 <p>
-                  <span className="inline-block bg-blue-200 text-blue-700 font-semibold px-3 py-1 rounded-full">
+                  <span className="inline-block bg-blue-200 text-blue-700 font-semibold px-3 py-1 rounded-full shadow-md shadow-cyan-400/50">
                     เกรดเฉลี่ย {edu.gpa}
                   </span>
                 </p>
