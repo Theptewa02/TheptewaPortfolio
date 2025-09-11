@@ -32,7 +32,7 @@ export default function EducationPage() {
           <h2 className="glow-text text-8xl uppercase mb-2 text-center">
             Education
           </h2>
-          <h2 className="text-5xl font-bold text-sky-600 mb-12 text-center border-t-4 pt-4">
+          <h2 className="text-5xl font-bold text-sky-600 mb-12 text-center border-t-4 pt-4 w-[600px] mx-auto">
             ประวัติการศึกษา
           </h2>
         </div>

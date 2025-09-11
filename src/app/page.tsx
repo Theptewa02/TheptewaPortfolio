@@ -11,18 +11,11 @@ import ScrollVelocity from "@/components/ScrollVelocity";
 export default function Page() {
   return (
     <main className="overflow-y-scroll h-screen">
-      <div id="home"><HomePage /></div>
-      <div id="education">
-        {/* <ScrollVelocity
-          texts={['Education |', 'ประวัติการศึกษา |']} 
-          velocity={50} 
-          className="text-blue-400"
-        /> */}
-        <EducationPage />
-      </div>
-      <div id="skills"><SkillsPage /></div>
-      <div id="projects"><ProjectPage /></div>
-      <div id="contact"><ContactPage /></div>
+      <div id="home" className="mb-22"><HomePage /></div>
+      <div id="education" className="mb-22"><EducationPage /></div>
+      <div id="skills" className="mb-22"><SkillsPage /></div>
+      <div id="projects" className="mb-22"><ProjectPage /></div>
+      <div id="contact" className="mb-22"><ContactPage /></div>
     </main>
   );
 }

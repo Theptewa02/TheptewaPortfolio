@@ -22,10 +22,7 @@ export default function HomePage() {
               />
             </h1>
             <h1 className="text-2xl text-slate-300 mt-6">อยากสมัครงานในตำแหน่ง</h1>
-            {/* <h2 className="text-2xl font-semibold text-blue-600 mb-6">
-              Full Stack Developer | Software Developer
-            </h2> */}
-            <h2 className="text-2xl font-semibold bg-gradient-to-r from-blue-600 via-sky-400 to-cyan-400 bg-clip-text text-transparent mb-6">
+            <h2 className="text-3xl font-semibold bg-gradient-to-r from-blue-600 via-sky-400 to-cyan-400 bg-clip-text text-transparent mb-6">
               Full Stack Developer | Software Developer
             </h2>
             <p className="text-[15.5px] leading-relaxed text-justify indent-8 text-slate-300">
