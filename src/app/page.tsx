@@ -6,7 +6,6 @@ import SkillsPage from "@/app/components/SkillsPage";
 import ProjectPage from "@/app/components/ProjectPage";
 import ContactPage from "@/app/components/ContactPage";
 
-import ScrollVelocity from "@/components/ScrollVelocity";
 
 export default function Page() {
   return (

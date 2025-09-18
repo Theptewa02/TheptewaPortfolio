@@ -136,7 +136,7 @@ export default function SkillsPage() {
       <div className="max-w-full py-8 space-y-12">
         <div>
           <h2 className="glow-text text-8xl uppercase mb-2 text-center">
-            Skills
+            Skill
           </h2>
           <h2 className="text-5xl font-bold text-sky-600 mb-12 text-center border-t-4 pt-4 w-[380px] mx-auto">
             ทักษะ
