@@ -14,7 +14,7 @@ export default function Page() {
       <div id="education" className="mb-22"><EducationPage /></div>
       <div id="skills" className="mb-22"><SkillsPage /></div>
       <div id="projects" className="mb-22"><ProjectPage /></div>
-      <div id="contact" className="mb-22"><ContactPage /></div>
+      {/* <div id="contact" className="mb-22"><ContactPage /></div> */}
     </main>
   );
 }
