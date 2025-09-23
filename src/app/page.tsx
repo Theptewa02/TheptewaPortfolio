@@ -9,12 +9,11 @@ import ContactPage from "@/app/components/ContactPage";
 
 export default function Page() {
   return (
-    <main className="overflow-y-scroll h-screen">
+    <main className="overflow-y-scroll hide-scrollbar h-screen">
       <div id="home" className="mb-22"><HomePage /></div>
       <div id="education" className="mb-22"><EducationPage /></div>
       <div id="skills" className="mb-22"><SkillsPage /></div>
       <div id="projects" className="mb-22"><ProjectPage /></div>
-      {/* <div id="contact" className="mb-22"><ContactPage /></div> */}
     </main>
   );
 }
