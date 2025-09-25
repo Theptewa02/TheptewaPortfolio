@@ -9,6 +9,8 @@ module.exports = {
     extend: {
       fontFamily: {
         baiJamjuree: ['var(--font-bai-jamjuree)', 'sans-serif'],
+        audiowide: ["var(--font-audiowide)", "sans-serif"],
+        kodemono: ["var(--font-kodemono)", "monospace"],
       },
     },
   },

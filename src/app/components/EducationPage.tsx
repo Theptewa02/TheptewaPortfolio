@@ -26,7 +26,7 @@ export default function EducationPage() {
   ];
 
   return (
-    <SectionWrapper>
+    <div className="min-h-screen flex items-center justify-center px-6">
       <div className="max-w-full mx-auto">
         <div>
           <h2 className="glow-text text-8xl uppercase mb-2 text-center">
@@ -77,6 +77,6 @@ export default function EducationPage() {
           ))}
         </div>
       </div>
-    </SectionWrapper>
+    </div>
   );
 }

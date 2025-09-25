@@ -1,12 +1,23 @@
 import type { Metadata } from "next";
-import { Bai_Jamjuree } from "next/font/google";
+import { Bai_Jamjuree, Audiowide, Kode_Mono } from "next/font/google";
 import "./globals.css";
-import Squares from "@/components/Squares";
 
 const baiJamjuree = Bai_Jamjuree({
   subsets: ["latin", "thai"], // ใส่ thai ด้วยเพื่อรองรับภาษาไทย
   variable: "--font-bai-jamjuree",
   weight: ["300", "400", "500", "600", "700"], // ใส่น้ำหนักที่ใช้จริง
+});
+
+export const audiowide = Audiowide({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-audiowide", // สร้างเป็น CSS variable
+});
+
+export const kodeMono = Kode_Mono({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  variable: "--font-kodemono",
 });
 
 export const metadata: Metadata = {
@@ -20,17 +31,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="th">
-      <body className={`${baiJamjuree.variable} font-sans antialiased`}>
-        {/* <div className="fixed inset-0 -z-10">
-          <Squares
-            speed={0.3}
-            squareSize={100}
-            direction="down"
-            borderColor="#1447e6"
-            hoverFillColor="#193cb8"
-          />
-        </div> */}
+    <html lang="en">
+      <body className={`${baiJamjuree.variable} ${audiowide.variable} ${kodeMono.variable} font-sans antialiased`}>
         {children}
       </body>
     </html>

@@ -132,7 +132,7 @@ const skillsAndTools = [
 
 export default function SkillsPage() {
   return (
-    <SectionWrapper>
+    <div className="min-h-screen flex items-center justify-center px-6">
       <div className="max-w-full py-8 space-y-12">
         <div>
           <h2 className="glow-text text-8xl uppercase mb-2 text-center">
@@ -163,6 +163,6 @@ export default function SkillsPage() {
           ))}
         </div>
       </div>
-    </SectionWrapper>
+    </div>
   );
 }

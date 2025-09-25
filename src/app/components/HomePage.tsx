@@ -38,7 +38,7 @@ export default function HomePage() {
   ];
 
   return (
-    <SectionWrapper>
+    <div className="min-h-screen flex items-center justify-center px-6">
       <div className="max-w-6xl mx-auto grid md:grid-cols-[3fr_2fr] gap-10 items-center">
         {/* ด้านซ้าย: ข้อความ */}
         <GlowBorder>
@@ -94,6 +94,6 @@ export default function HomePage() {
           />
         </div>
       </div>
-    </SectionWrapper>
+    </div>
   );
 }

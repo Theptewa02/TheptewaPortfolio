@@ -7,13 +7,12 @@ import {
   ZoomInOutlined,
   ZoomOutOutlined,
 } from "@ant-design/icons";
-import { Image, Space } from "antd";
+import { Image as AntdImage , Space } from "antd";
+import Image from "next/image";
 
 export default function ProjectGallery() {
   const [current, setCurrent] = React.useState(0);
 
-  // ฟังก์ชัน PreviewGroup เดียวกันทุกที่
-  // ✨ สร้าง type ขึ้นมาเอง
   interface ToolbarInfo {
     transform: { scale: number };
     actions: {
@@ -72,21 +71,41 @@ export default function ProjectGallery() {
       </div>
 
       <div className="space-y-20">
+        <div>
+          <h3 className="text-2xl font-bold mb-8 text-sky-400 text-center">
+            VULNERABILITY SEARCH AND TRACKING SYSTEM (ระบบค้นหาและติดตามช่องโหว่)
+          </h3>
+          <Image
+            src="/images/projects_picture/project-bg.jpg"
+            alt="cover"
+            width={700}
+            height={500}
+            className="rounded-md mb-8 border-6 border-slate-400 flex mx-auto"
+          />
+          <p className="mb-8 text-gray-300 text-[16px] indent-8 text-justify leading-relaxed">
+            โปรเจกต์ที่พัฒนาเพื่อใช้ในการค้นหาและติดตามข้อมูลช่องโหว่
+            (Vulnerability) โดยทางฝั่ง Frontend ได้ใช้ Next.js และ Tailwind
+            CSS ในการพัฒนา ส่วนทางฝั่ง Backend ได้ใช้ Node.js กับ Python
+            ร่วมกับ FastAPI และใช้ฐานข้อมูล MongoDB ในการจัดเก็บข้อมูล
+            ซึ่งภายหลังได้มีการพัฒนาระบบแจ้งเตือนทางอีเมลอัตโนมัติหาผู้ใช้
+            เมื่อมีช่องโหว่ใหม่ที่มีผลกระทบกับผลิตภัณฑ์ที่ผู้ใช้ติดตามอยู่ถูกค้นพบ
+          </p>
+        </div>
         {/* ---------------- Project 1 ---------------- */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           {/* ภาพ */}
           <div className="flex justify-center md:order-2">
-            <Image.PreviewGroup preview={previewConfig(2)}>
+            <AntdImage.PreviewGroup preview={previewConfig(2)}>
               <div className="relative w-[400px] h-[220px] cursor-pointer">
                 {/* project (โชว์และกดได้) */}
-                <Image
+                <AntdImage
                   src="/images/projects_picture/project-1.jpg"
                   alt="project-1-main"
                   width={400}
-                  className="absolute top-0 left-0 border-6 border-white shadow-lg z-10"
+                  className="absolute top-0 left-0 rounded-md border-6 border-slate-400 shadow-lg z-10"
                 />
                 {/* api (กดได้ใน preview แต่ไม่เกะกะในหน้า) */}
-                <Image
+                <AntdImage
                   src="/images/projects_picture/api-1.png"
                   alt="project-1-api"
                   width={400}
@@ -96,17 +115,17 @@ export default function ProjectGallery() {
                   src="/images/projects_picture/api-1.png"
                   alt="project-1-api"
                   width={400}
-                  className="absolute top-9 left-3 border-6 border-white shadow-lg opacity-70 z-0 pointer-events-none"
+                  className="absolute top-0 left-5 rounded-md border-6 border-slate-400 shadow-lg opacity-70 z-0 pointer-events-none"
                 />
               </div>
-            </Image.PreviewGroup>
+            </AntdImage.PreviewGroup>
           </div>
 
           {/* รายละเอียด */}
           <div className="text-gray-300 space-y-4 md:order-2">
-            <h3 className="text-2xl font-bold text-sky-400">โปรเจกต์ 1</h3>
-            <p className="leading-relaxed">
-              เว็บไซต์ Portfolio ที่สร้างด้วย Next.js + TailwindCSS
+            <h3 className="text-2xl font-bold text-sky-400">หน้า CVE Statistics / API</h3>
+            <p className="text-[16px] indent-8 text-justify leading-relaxed">
+              หน้าหลักของระบบ ซึ่งจะแสดงข้อมูลสถิติของช่องโหว่ โดยแบ่งเป็นสถิติจำนวนช่องโหว่ที่เผยแพร่ล่าสุดและแก้ไขล่าสุด สถิติคะแนนค่าความรุนแรง (CVSS) ของช่องโหว่ และสถิติจำนวนช่องโหว่ในแต่ละปี
             </p>
           </div>
         </div>
@@ -115,24 +134,24 @@ export default function ProjectGallery() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           {/* รายละเอียด */}
           <div className="text-gray-300 space-y-4 md:order-1">
-            <h3 className="text-2xl font-bold text-sky-400">โปรเจกต์ 2</h3>
-            <p className="leading-relaxed">
-              แอปจัดการงาน (Task Management App)
+            <h3 className="text-2xl font-bold text-sky-400">หน้า All CVEs / API</h3>
+            <p className="text-[16px] indent-8 text-justify leading-relaxed">
+              หน้าแสดงรายการข้อมูล CVE หรือช่องโหว่ทั้งหมดที่ถูกบันทึกไว้ โดยสามารถเลือกใช้การจัดเรียงข้อมูลช่องโหว่และกรองข้อมูลช่องโหว่ตาม วันที่เผยแพร่ล่าสุด, วันที่แก้ไขล่าสุด, ค่าความรุนแรง (CVSS) แต่ละเวอร์ชัน, ค่าความเสี่ยง (EPSS), ชื่อผู้ผลิต (Vendor), ชื่อผลิตภัณฑ์ (Product) ได้
             </p>
           </div>
           {/* ภาพ */}
           <div className="flex justify-center md:order-2">
-            <Image.PreviewGroup preview={previewConfig(2)}>
+            <AntdImage.PreviewGroup preview={previewConfig(2)}>
               <div className="relative w-[400px] h-[220px] cursor-pointer">
                 {/* project (โชว์และกดได้) */}
-                <Image
+                <AntdImage
                   src="/images/projects_picture/project-2.jpg"
                   alt="project-2-main"
                   width={400}
-                  className="absolute top-0 left-0 border-6 border-white shadow-lg z-10"
+                  className="absolute top-0 left-0 rounded-md border-6 border-slate-400 shadow-lg z-10"
                 />
                 {/* api (กดได้ใน preview แต่ไม่เกะกะในหน้า) */}
-                <Image
+                <AntdImage
                   src="/images/projects_picture/api-2.png"
                   alt="project-2-api"
                   width={400}
@@ -142,10 +161,10 @@ export default function ProjectGallery() {
                   src="/images/projects_picture/api-2.png"
                   alt="project-2-api"
                   width={400}
-                  className="absolute top-9 left-3 border-6 border-white shadow-lg opacity-70 z-0 pointer-events-none"
+                  className="absolute top-0 left-5 rounded-md border-6 border-slate-400 shadow-lg opacity-70 z-0 pointer-events-none"
                 />
               </div>
-            </Image.PreviewGroup>
+            </AntdImage.PreviewGroup>
           </div>
         </div>
 
@@ -153,17 +172,17 @@ export default function ProjectGallery() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           {/* ภาพ */}
           <div className="flex justify-center md:order-2">
-            <Image.PreviewGroup preview={previewConfig(2)}>
+            <AntdImage.PreviewGroup preview={previewConfig(2)}>
               <div className="relative w-[400px] h-[220px] cursor-pointer">
                 {/* project (โชว์และกดได้) */}
-                <Image
+                <AntdImage
                   src="/images/projects_picture/project-3.jpg"
                   alt="project-3-main"
                   width={400}
-                  className="absolute top-0 left-0 border-6 border-white shadow-lg z-10"
+                  className="absolute top-0 left-0 rounded-md border-6 border-slate-400 shadow-lg z-10"
                 />
                 {/* api (กดได้ใน preview แต่ไม่เกะกะในหน้า) */}
-                <Image
+                <AntdImage
                   src="/images/projects_picture/api-3.png"
                   alt="project-3-api"
                   width={400}
@@ -173,16 +192,16 @@ export default function ProjectGallery() {
                   src="/images/projects_picture/api-3.png"
                   alt="project-3-api"
                   width={400}
-                  className="absolute top-9 left-3 border-6 border-white shadow-lg opacity-70 z-0 pointer-events-none"
+                  className="absolute top-0 left-5 rounded-md border-6 border-slate-400 shadow-lg opacity-70 z-0 pointer-events-none"
                 />
               </div>
-            </Image.PreviewGroup>
+            </AntdImage.PreviewGroup>
           </div>
           {/* รายละเอียด */}
           <div className="text-gray-300 space-y-4 md:order-2">
-            <h3 className="text-2xl font-bold text-sky-400">โปรเจกต์ 3</h3>
-            <p className="leading-relaxed">
-              เว็บบล็อกส่วนตัว พร้อมระบบ Markdown
+            <h3 className="text-2xl font-bold text-sky-400">หน้า Products / API</h3>
+            <p className="text-[16px] indent-8 text-justify leading-relaxed">
+              หน้าแสดงรายการผลิตภัณฑ์ทั้งหมด โดยสามารถเลือกใช้การจัดเรียงข้อมูลผลิตภัณฑ์และกรองข้อมูลผลิตภัณฑ์ตาม ชื่อผลิตภัณฑ์ (Product Name), ประเภทของผลิตภัณฑ์ (Product Type), ชื่อผู้ผลิต (Vendor Name), จำนวนช่องโหว่ (Vulnerabilities) ได้
             </p>
           </div>
         </div>
@@ -191,19 +210,19 @@ export default function ProjectGallery() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           {/* รายละเอียด */}
           <div className="text-gray-300 space-y-4 md:order-1">
-            <h3 className="text-2xl font-bold text-sky-400">โปรเจกต์ 4</h3>
-            <p className="leading-relaxed">ระบบแชทเรียลไทม์ด้วย Socket.io</p>
+            <h3 className="text-2xl font-bold text-sky-400">หน้า Watch List</h3>
+            <p className="text-[16px] indent-8 text-justify leading-relaxed">หน้าแสดงรายการผลิตภัณฑ์ที่ผู้ใช้ติดตามการแจ้งเตือนไว้ทั้งหมด โดยสามารถเลือกกรองรายการผลิตภัณฑ์ได้ตาม ชื่อผู้ผลิต (Vendors), ชื่อผลิตภัณฑ์ (Products) ได้ และสามารถลบรายการผลิตภัณฑ์ที่ผู้ใช้ไม่ต้องการติดตามแจ้งเตือนได้</p>
           </div>
           {/* ภาพ */}
           <div className="flex justify-center md:order-2">
-            <Image.PreviewGroup preview={previewConfig(1)}>
-              <Image
+            <AntdImage.PreviewGroup preview={previewConfig(1)}>
+              <AntdImage
                 src="/images/projects_picture/project-4.jpg"
                 alt="project-4"
                 width={400}
-                className="border-6 border-white cursor-pointer"
+                className="rounded-md border-6 border-slate-400 cursor-pointer"
               />
-            </Image.PreviewGroup>
+            </AntdImage.PreviewGroup>
           </div>
         </div>
 
@@ -211,19 +230,19 @@ export default function ProjectGallery() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           {/* ภาพ */}
           <div className="flex justify-center md:order-1">
-            <Image.PreviewGroup preview={previewConfig(1)}>
-              <Image
+            <AntdImage.PreviewGroup preview={previewConfig(1)}>
+              <AntdImage
                 src="/images/projects_picture/project-5.jpg"
                 alt="project-5"
                 width={400}
-                className="border-6 border-white cursor-pointer"
+                className="rounded-md border-6 border-slate-400 cursor-pointer"
               />
-            </Image.PreviewGroup>
+            </AntdImage.PreviewGroup>
           </div>
           {/* รายละเอียด */}
           <div className="text-gray-300 space-y-4 md:order-2">
-            <h3 className="text-2xl font-bold text-sky-400">โปรเจกต์ 5</h3>
-            <p className="leading-relaxed">แดชบอร์ดสำหรับวิเคราะห์ข้อมูล</p>
+            <h3 className="text-2xl font-bold text-sky-400">หน้าข้อมูลโดยรวมของรายการผลิตภัณฑ์"</h3>
+            <p className="text-[16px] indent-8 text-justify leading-relaxed">หน้าแสดงข้อมูลโดยรวมของรายการผลิตภัณฑ์ โดยจะแสดงจำนวนค่าความรุนแรงของช่องโหว่ทั้งหมด โดยแบ่งตามแต่ละเวอร์ชัน และแสดงจำนวนช่องโหว่ของรายการผลิตภัณฑ์ต่อปี</p>
           </div>
         </div>
 
@@ -231,19 +250,19 @@ export default function ProjectGallery() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           {/* รายละเอียด */}
           <div className="text-gray-300 space-y-4 md:order-1">
-            <h3 className="text-2xl font-bold text-sky-400">โปรเจกต์ 6</h3>
-            <p className="leading-relaxed">แอปทดลองใช้ MongoDB + NextAuth</p>
+            <h3 className="text-2xl font-bold text-sky-400">ตัวอย่างการส่งแจ้งเตือนทางอีเมล</h3>
+            <p className="text-[16px] indent-8 text-justify leading-relaxed">ตัวอย่างการส่งแจ้งเตือนทางอีเมล เมื่อมีช่องโหว่ใหม่ถูกค้นพบ และช่องโหว่ใหม่มีผลกระทบกับรายการผลิตภัณฑ์ที่ผู้ใช้ติดตามไว้ ระบบจะส่งแจ้งเตือนอัตโนมัติไปที่อีเมลของผู้ใช้โดยทันที</p>
           </div>
           {/* ภาพ */}
           <div className="flex justify-center md:order-2">
-            <Image.PreviewGroup preview={previewConfig(1)}>
-              <Image
+            <AntdImage.PreviewGroup preview={previewConfig(1)}>
+              <AntdImage
                 src="/images/projects_picture/project-6.jpg"
                 alt="project-6"
                 width={400}
-                className="border-6 border-white cursor-pointer"
+                className="rounded-md border-6 border-slate-400 cursor-pointer"
               />
-            </Image.PreviewGroup>
+            </AntdImage.PreviewGroup>
           </div>
         </div>
       </div>
@@ -509,7 +528,7 @@ export default function ProjectGallery() {
 //               (Vulnerability) โดยทางฝั่ง Frontend ได้ใช้ Next.js และ Tailwind
 //               CSS ในการพัฒนา ส่วนทางฝั่ง Backend ได้ใช้ Node.js กับ Python
 //               ร่วมกับ FastAPI และใช้ฐานข้อมูล MongoDB ในการจัดเก็บข้อมูล
-//               ซึ่งภายหลังได้มาการพัฒนาระบบแจ้งเตือนทางอีเมลอัตโนมัติหาผู้ใช้
+//               ซึ่งภายหลังได้มีการพัฒนาระบบแจ้งเตือนทางอีเมลอัตโนมัติหาผู้ใช้
 //               เมื่อมีช่องโหว่ใหม่ที่มีผลกระทบกับผลิตภัณฑ์ที่ผู้ใช้ติดตามอยู่ถูกค้นพบ
 //             </p>
 //           </div>
@@ -520,7 +539,7 @@ export default function ProjectGallery() {
 //                 {section.title}
 //               </h3>
 //               <div>
-//                 <AntdImage.PreviewGroup>
+//                 <AntdAntdImage.PreviewGroup>
 //                   {section.images.map((src, i) => (
 //                     <AntdImage
 //                       key={i}
@@ -529,7 +548,7 @@ export default function ProjectGallery() {
 //                       className="rounded-md border border-slate-400"
 //                     />
 //                   ))}
-//                 </AntdImage.PreviewGroup>
+//                 </AntdAntdImage.PreviewGroup>
 //               </div>
 //               <p className="mt-4 mb-4 text-gray-300 text-[16px] indent-6 text-justify">
 //                 {section.description}
