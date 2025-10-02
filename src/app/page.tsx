@@ -73,25 +73,29 @@ export default function Page() {
       icon: <SiFacebook className="w-6 h-6" />,
       url: "https://facebook.com/game.theptewa",
       label: "Facebook",
-      color: "hover:bg-blue-600 hover:shadow-xl hover:shadow-blue-600/50",
+      color:
+        "hover:bg-blue-600 hover:shadow-[0_0_20px_#2563eb] hover:shadow-blue-500/70",
     },
     {
       icon: <SiLine className="w-6 h-6" />,
       url: "https://line.me/ti/p/y1rgmFMb6n",
       label: "Line",
-      color: "hover:bg-green-500 hover:shadow-xl hover:shadow-green-500/50",
+      color:
+        "hover:bg-green-500 hover:shadow-[0_0_20px_#22c55e] hover:shadow-green-400/70",
     },
     {
       icon: <SiGmail className="w-6 h-6" />,
       url: "mailto:theptewa.phuthachat@gmail.com",
       label: "Gmail",
-      color: "hover:bg-red-500 hover:shadow-xl hover:shadow-red-500/50",
+      color:
+        "hover:bg-red-500 hover:shadow-[0_0_20px_#ef4444] hover:shadow-red-400/70",
     },
     {
       icon: <FaPhone className="w-6 h-6" />,
       url: "tel:+66808352670",
       label: "Telephone",
-      color: "hover:bg-emerald-500 hover:shadow-xl hover:shadow-emerald-500/50",
+      color:
+        "hover:bg-emerald-500 hover:shadow-[0_0_20px_#10b981] hover:shadow-emerald-400/70",
     },
   ];
 
@@ -240,23 +244,22 @@ export default function Page() {
       >
         <div className="max-w-6xl mx-auto grid md:grid-cols-[3fr_2fr] gap-10 items-center">
           {/* รูปภาพ */}
-          <div className="flex justify-center md:justify-end order-1 md:order-2">
+          <div className="flex justify-center lg:justify-end order-1 md:order-2">
             <Image
               src="/images/Theptewa_img.jpg"
               alt="Theptewa"
               width={350}
               height={350}
-              className="rounded-full object-cover shadow-xl shadow-sky-600/60"
+              className="rounded-full object-cover shadow-xl shadow-sky-600/60 border-4 border-sky-600"
               priority
               data-aos="fade-up"
-              
             />
           </div>
 
           {/* ข้อความ */}
           <GlowBorder className="order-2 md:order-1">
             <div className="text-center md:text-left max-w-2xl">
-              <h1 className="text-5xl font-bold text-slate-600 min-h-[100px]">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-600 min-h-[100px] font-audiowide">
                 <TextType
                   text={[
                     "สวัสดีครับ!\nผม เทพเทวา พุทธชาติ",
@@ -266,28 +269,27 @@ export default function Page() {
                   pauseDuration={1500}
                   showCursor={false}
                   data-aos="fade-up"
-                  
                 />
               </h1>
+
               <h1
-                className="text-2xl text-slate-300 mt-6"
+                className="text-lg sm:text-xl md:text-2xl text-slate-300 mt-4 mb-2"
                 data-aos="fade-up"
-                
               >
                 อยากสมัครงานในตำแหน่ง
               </h1>
+
               <h2
-                className="text-3xl font-semibold bg-gradient-to-r from-blue-600 via-sky-400 to-cyan-400 bg-clip-text text-transparent mb-6"
+                className="text-lg sm:text-xl md:text-2xl font-semibold bg-gradient-to-r from-blue-600 via-sky-400 to-cyan-400 bg-clip-text text-transparent mb-6 font-audiowide"
                 data-aos="fade-up"
-                
                 data-aos-delay={50}
               >
                 Full Stack Developer | Software Developer
               </h2>
+
               <p
-                className="text-[15.5px] leading-relaxed text-justify indent-8 text-slate-300"
+                className="text-sm sm:text-base md:text-[15.5px] leading-relaxed text-justify indent-8 text-slate-300"
                 data-aos="fade-up"
-                
                 data-aos-delay={50}
               >
                 ผมเป็นนักศึกษาจบใหม่ มีความชื่นชอบในการทำงานสายโปรแกรมเมอร์
@@ -295,9 +297,8 @@ export default function Page() {
                 และการออกแบบระบบให้ทำงานได้อย่างถูกต้อง
               </p>
               <p
-                className="text-[15.5px] leading-relaxed text-justify indent-8 text-slate-300"
+                className="text-sm sm:text-base md:text-[15.5px] leading-relaxed text-justify indent-8 text-slate-300"
                 data-aos="fade-up"
-                
                 data-aos-delay={50}
               >
                 มีประสบการณ์ฝึกงานด้าน Backend และกำลังศึกษาเทคโนโลยีฝั่ง
@@ -305,6 +306,7 @@ export default function Page() {
                 เสริมทักษะและเตรียมพร้อมสู่การทำงานในตำแหน่ง Full Stack
                 Developer อย่างมีประสิทธิภาพ
               </p>
+
               <div className="flex gap-4 mt-6 justify-center md:justify-start">
                 {contacts.map((c, i) => (
                   <a
@@ -312,16 +314,12 @@ export default function Page() {
                     href={c.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`group p-3 rounded-full bg-slate-800 text-white shadow-md transition-colors duration-200 ${c.color}`}
+                    className={`group p-3 rounded-full bg-slate-800 text-white shadow-md transition-all duration-300 ${c.color}`}
                     aria-label={c.label}
                     data-aos="fade-up"
-                    
                     data-aos-delay={i * 50}
                   >
-                    {/* icon จะ bounce ตอน hover */}
-                    <span className="block group-hover:animate-bounce">
-                      {c.icon}
-                    </span>
+                    {c.icon}
                   </a>
                 ))}
               </div>
@@ -336,31 +334,33 @@ export default function Page() {
         className="min-h-screen flex items-center justify-center px-6"
       >
         <div className="max-w-full mx-auto">
+          {/* หัวข้อหลัก */}
           <h2
-            className="glow-text text-8xl uppercase mb-2 text-center font-audiowide"
+            className="en-title glow-text uppercase mb-4 border-b-4 border-sky-400 w-fit mx-auto font-audiowide"
             data-aos="zoom-in"
-            
           >
             Education
           </h2>
+
+          {/* หัวข้อย่อย */}
           <h2
-            className="text-5xl font-bold text-sky-600 mb-18 text-center border-t-4 pt-4 w-[600px] mx-auto"
+            className="th-title font-bold text-sky-600 mb-12 text-center mx-auto"
             data-aos="zoom-in"
-            
           >
             ประวัติการศึกษา
           </h2>
+
           <div className="space-y-12">
             {education.map((edu, i) => (
               <div
                 key={i}
-                className={`flex flex-col md:flex-row items-center gap-8 ${
+                className={`flex flex-col md:flex-row items-center justify-center max-w-3xl mx-auto gap-6 ${
                   i % 2 === 1 ? "md:flex-row-reverse" : ""
                 }`}
                 data-aos={i % 2 === 0 ? "fade-right" : "fade-left"}
-                
               >
-                <div className="w-40 h-40 flex-shrink-0">
+                {/* โลโก้ */}
+                <div className="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 flex-shrink-0">
                   <GlowBorder className="p-[4px] rounded-full inline-block [&>div]:rounded-full [&>div:last-child]:bg-transparent [&>div:last-child]:p-0">
                     <Image
                       src={edu.logo}
@@ -371,18 +371,20 @@ export default function Page() {
                     />
                   </GlowBorder>
                 </div>
-                <div className="text-center md:text-left space-y-2">
-                  <span className="text-md font-bold text-sky-400">
+
+                {/* เนื้อหา */}
+                <div className="text-center md:text-left space-y-2 px-2">
+                  <span className="text-sm sm:text-base md:text-md font-bold text-sky-400">
                     {edu.year}
                   </span>
-                  <h3 className="text-xl font-bold text-sky-400">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-sky-400">
                     {edu.place}
                   </h3>
-                  <p className="text-lg text-slate-200">
+                  <p className="text-base sm:text-lg md:text-xl text-slate-200">
                     {edu.education} - {edu.branch}
                   </p>
                   <p>
-                    <span className="inline-block bg-blue-200 text-blue-700 font-semibold px-3 py-1 rounded-full shadow-md shadow-cyan-400/50">
+                    <span className="inline-block bg-blue-200 text-blue-700 font-semibold px-3 py-1 rounded-full shadow-md shadow-cyan-400/50 text-sm sm:text-base">
                       เกรดเฉลี่ย {edu.gpa}
                     </span>
                   </p>
@@ -398,39 +400,48 @@ export default function Page() {
         id="skills"
         className="min-h-screen flex items-center justify-center px-6"
       >
-        <div className="max-w-full py-8 space-y-12">
+        <div className="max-w-full mx-auto">
+          {/* หัวข้อหลัก */}
           <h2
-            className="glow-text text-8xl uppercase mb-2 text-center"
+            className="en-title glow-text uppercase mb-4 border-b-4 border-sky-400 w-fit mx-auto font-audiowide"
             data-aos="zoom-in"
-            
           >
             Skill
           </h2>
+
+          {/* หัวข้อย่อย */}
           <h2
-            className="text-5xl font-bold text-sky-600 mb-18 text-center border-t-4 pt-4 w-[380px] mx-auto"
+            className="th-title font-bold text-sky-600 mb-12 text-center mx-auto"
             data-aos="zoom-in"
-            
           >
             ทักษะ
           </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5">
+
+          {/* Grid แสดงสกิล */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-5">
             {skillsAndTools.map((item, i) => (
               <SpotlightCard
                 key={i}
                 spotlightColor="rgba(0, 156, 228, 0.5)"
                 className="fill-cyan-500 drop-shadow-md drop-shadow-sky-500 cursor-default flex items-center justify-center"
                 data-aos="fade-up"
-                
                 data-aos-delay={i * 50}
               >
-                <div className="flex flex-col items-center px-4">
+                <div className="flex flex-col items-center px-2">
+                  {/* Icon */}
                   <div className="bg-white rounded-full p-3 flex items-center justify-center">
                     {item.node}
                   </div>
-                  <span className="text-white font-semibold mt-2">
+
+                  {/* Title */}
+                  <span className="text-white mt-2 font-audiowide text-xs sm:text-sm md:text-base">
                     {item.title}
                   </span>
-                  <span className="text-sm text-sky-400">{item.category}</span>
+
+                  {/* Category */}
+                  <span className="text-sky-400 font-audiowide text-[10px] sm:text-xs md:text-sm">
+                    {item.category}
+                  </span>
                 </div>
               </SpotlightCard>
             ))}
@@ -440,26 +451,26 @@ export default function Page() {
 
       {/* -------- Projects -------- */}
       <section id="projects" className="max-w-6xl mx-auto px-6">
+        {/* หัวข้อหลัก */}
         <h2
-          className="glow-text text-8xl uppercase mb-2 text-center"
+          className="en-title glow-text uppercase mb-4 border-b-4 border-sky-400 w-fit mx-auto font-audiowide"
           data-aos="zoom-in"
-          
         >
           Project
         </h2>
         <h2
-          className="text-5xl font-bold text-sky-600 mb-18 text-center border-t-4 pt-4 w-[490px] mx-auto"
+          className="th-title font-bold text-sky-600 mb-12 text-center mx-auto"
           data-aos="zoom-in"
-          
         >
           โปรเจกต์
         </h2>
+
         <div className="space-y-20">
+          {/* ---------------- Intro Project ---------------- */}
           <div>
             <h3
-              className="text-2xl font-bold mb-8 text-sky-400 text-center"
+              className="text-xl md:text-2xl font-bold mb-6 text-sky-400 text-center font-audiowide"
               data-aos="fade-up"
-              
             >
               VULNERABILITY SEARCH AND TRACKING SYSTEM
               (ระบบค้นหาและติดตามช่องโหว่)
@@ -469,14 +480,12 @@ export default function Page() {
               alt="cover"
               width={700}
               height={500}
-              className="rounded-md mb-8 border-6 border-slate-400 flex mx-auto"
+              className="rounded-md mb-8 border-4 border-slate-400 flex mx-auto"
               data-aos="fade-up"
-              
             />
             <p
-              className="mb-8 text-gray-300 text-lg indent-8 text-justify leading-relaxed"
+              className="mb-8 text-gray-300 text-base md:text-lg indent-8 text-justify leading-relaxed max-w-4xl mx-auto"
               data-aos="fade-up"
-              
             >
               โปรเจกต์ที่พัฒนาเพื่อใช้ในการค้นหาและติดตามข้อมูลช่องโหว่
               (Vulnerability) โดยทางฝั่ง Frontend ได้ใช้ Next.js และ Tailwind
@@ -486,47 +495,45 @@ export default function Page() {
               เมื่อมีช่องโหว่ใหม่ที่มีผลกระทบกับผลิตภัณฑ์ที่ผู้ใช้ติดตามอยู่ถูกค้นพบ
             </p>
           </div>
+
           {/* ---------------- Project 1 ---------------- */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div className="flex justify-center md:order-1">
               <AntdImage.PreviewGroup preview={previewConfig(2)}>
                 <div
-                  className="relative w-[400px] h-[220px] cursor-pointer"
+                  className="relative w-[360px] h-[200px] cursor-pointer"
                   data-aos="fade-right"
-                  
                 >
                   <AntdImage
                     src="/images/projects_picture/project-1.jpg"
                     alt="project-1-main"
-                    width={400}
-                    className="absolute top-0 left-0 rounded-md border-6 border-slate-400 shadow-lg z-10"
+                    width={360}
+                    className="absolute top-0 left-0 rounded-md border-4 border-slate-400 shadow-lg z-10"
                   />
                   <AntdImage
                     src="/images/projects_picture/api-1.png"
                     alt="project-1-api"
-                    width={400}
+                    width={360}
                   />
                   <img
                     src="/images/projects_picture/api-1.png"
                     alt="project-1-api"
-                    width={400}
-                    className="absolute top-1 left-2 rounded-md border-6 border-slate-400 shadow-lg opacity-70 z-0 pointer-events-none"
+                    width={360}
+                    className="absolute top-1 left-2 rounded-md border-4 border-slate-400 shadow-lg opacity-70 z-0 pointer-events-none"
                   />
                 </div>
               </AntdImage.PreviewGroup>
             </div>
-            <div className="text-gray-300 space-y-4 md:order-2">
+            <div className="text-gray-300 space-y-3 md:order-2">
               <h3
-                className="text-2xl font-bold text-sky-400"
+                className="text-xl font-bold text-sky-400 font-audiowide"
                 data-aos="fade-left"
-                
               >
                 หน้า CVE Statistics / API
               </h3>
               <p
-                className="text-lg indent-8 text-justify leading-relaxed"
+                className="text-base md:text-lg indent-8 text-justify leading-relaxed"
                 data-aos="fade-left"
-                
               >
                 หน้าหลักของระบบ ซึ่งจะแสดงข้อมูลสถิติของช่องโหว่
                 โดยแบ่งเป็นสถิติจำนวนช่องโหว่ที่เผยแพร่ล่าสุดและแก้ไขล่าสุด
@@ -541,42 +548,39 @@ export default function Page() {
             <div className="flex justify-center md:order-2">
               <AntdImage.PreviewGroup preview={previewConfig(2)}>
                 <div
-                  className="relative w-[400px] h-[220px] cursor-pointer"
+                  className="relative w-[360px] h-[200px] cursor-pointer"
                   data-aos="fade-left"
-                  
                 >
                   <AntdImage
                     src="/images/projects_picture/project-2.jpg"
                     alt="project-2-main"
-                    width={400}
-                    className="absolute top-0 left-0 rounded-md border-6 border-slate-400 shadow-lg z-10"
+                    width={360}
+                    className="absolute top-0 left-0 rounded-md border-4 border-slate-400 shadow-lg z-10"
                   />
                   <AntdImage
                     src="/images/projects_picture/api-2.png"
                     alt="project-2-api"
-                    width={400}
+                    width={360}
                   />
                   <img
                     src="/images/projects_picture/api-2.png"
                     alt="project-2-api"
-                    width={400}
-                    className="absolute top-1 left-2 rounded-md border-6 border-slate-400 shadow-lg opacity-70 z-0 pointer-events-none"
+                    width={360}
+                    className="absolute top-1 left-2 rounded-md border-4 border-slate-400 shadow-lg opacity-70 z-0 pointer-events-none"
                   />
                 </div>
               </AntdImage.PreviewGroup>
             </div>
-            <div className="text-gray-300 space-y-4 md:order-1">
+            <div className="text-gray-300 space-y-3 md:order-1">
               <h3
-                className="text-2xl font-bold text-sky-400"
+                className="text-xl font-bold text-sky-400 font-audiowide"
                 data-aos="fade-right"
-                
               >
                 หน้า All CVEs / API
               </h3>
               <p
-                className="text-lg indent-8 text-justify leading-relaxed"
+                className="text-base md:text-lg indent-8 text-justify leading-relaxed"
                 data-aos="fade-right"
-                
               >
                 หน้าแสดงรายการข้อมูล CVE หรือช่องโหว่ทั้งหมดที่ถูกบันทึกไว้
                 โดยสามารถเลือกใช้การจัดเรียงข้อมูลช่องโหว่และกรองข้อมูลช่องโหว่ตาม
@@ -592,42 +596,39 @@ export default function Page() {
             <div className="flex justify-center md:order-1">
               <AntdImage.PreviewGroup preview={previewConfig(2)}>
                 <div
-                  className="relative w-[400px] h-[220px] cursor-pointer"
+                  className="relative w-[360px] h-[200px] cursor-pointer"
                   data-aos="fade-right"
-                  
                 >
                   <AntdImage
                     src="/images/projects_picture/project-3.jpg"
                     alt="project-3-main"
-                    width={400}
-                    className="absolute top-0 left-0 rounded-md border-6 border-slate-400 shadow-lg z-10"
+                    width={360}
+                    className="absolute top-0 left-0 rounded-md border-4 border-slate-400 shadow-lg z-10"
                   />
                   <AntdImage
                     src="/images/projects_picture/api-3.png"
                     alt="project-3-api"
-                    width={400}
+                    width={360}
                   />
                   <img
                     src="/images/projects_picture/api-3.png"
                     alt="project-3-api"
-                    width={400}
-                    className="absolute top-1 left-2 rounded-md border-6 border-slate-400 shadow-lg opacity-70 z-0 pointer-events-none"
+                    width={360}
+                    className="absolute top-1 left-2 rounded-md border-4 border-slate-400 shadow-lg opacity-70 z-0 pointer-events-none"
                   />
                 </div>
               </AntdImage.PreviewGroup>
             </div>
-            <div className="text-gray-300 space-y-4 md:order-2">
+            <div className="text-gray-300 space-y-3 md:order-2">
               <h3
-                className="text-2xl font-bold text-sky-400"
+                className="text-xl font-bold text-sky-400 font-audiowide"
                 data-aos="fade-left"
-                
               >
                 หน้า Products / API
               </h3>
               <p
-                className="text-lg indent-8 text-justify leading-relaxed"
+                className="text-base md:text-lg indent-8 text-justify leading-relaxed"
                 data-aos="fade-left"
-                
               >
                 หน้าแสดงรายการผลิตภัณฑ์ทั้งหมด
                 โดยสามารถเลือกใช้การจัดเรียงข้อมูลผลิตภัณฑ์และกรองข้อมูลผลิตภัณฑ์ตาม
@@ -642,29 +643,26 @@ export default function Page() {
             <div
               className="flex justify-center md:order-2"
               data-aos="fade-left"
-              
             >
               <AntdImage.PreviewGroup preview={previewConfig(1)}>
                 <AntdImage
                   src="/images/projects_picture/project-4.jpg"
                   alt="project-4"
-                  width={400}
-                  className="rounded-md border-6 border-slate-400 cursor-pointer"
+                  width={360}
+                  className="rounded-md border-4 border-slate-400 cursor-pointer"
                 />
               </AntdImage.PreviewGroup>
             </div>
-            <div className="text-gray-300 space-y-4 md:order-1">
+            <div className="text-gray-300 space-y-3 md:order-1">
               <h3
-                className="text-2xl font-bold text-sky-400"
+                className="text-xl font-bold text-sky-400 font-audiowide"
                 data-aos="fade-right"
-                
               >
                 หน้า Watch List
               </h3>
               <p
-                className="text-lg indent-8 text-justify leading-relaxed"
+                className="text-base md:text-lg indent-8 text-justify leading-relaxed"
                 data-aos="fade-right"
-                
               >
                 หน้าแสดงรายการผลิตภัณฑ์ที่ผู้ใช้ติดตามการแจ้งเตือนไว้ทั้งหมด
                 โดยสามารถเลือกกรองรายการผลิตภัณฑ์ได้ตาม ชื่อผู้ผลิต (Vendors),
@@ -679,29 +677,26 @@ export default function Page() {
             <div
               className="flex justify-center md:order-1"
               data-aos="fade-right"
-              
             >
               <AntdImage.PreviewGroup preview={previewConfig(1)}>
                 <AntdImage
                   src="/images/projects_picture/project-5.jpg"
                   alt="project-5"
-                  width={400}
-                  className="rounded-md border-6 border-slate-400 cursor-pointer"
+                  width={360}
+                  className="rounded-md border-4 border-slate-400 cursor-pointer"
                 />
               </AntdImage.PreviewGroup>
             </div>
-            <div className="text-gray-300 space-y-4 md:order-2">
+            <div className="text-gray-300 space-y-3 md:order-2">
               <h3
-                className="text-2xl font-bold text-sky-400"
+                className="text-xl font-bold text-sky-400 font-audiowide"
                 data-aos="fade-left"
-                
               >
                 หน้าข้อมูลโดยรวมของรายการผลิตภัณฑ์
               </h3>
               <p
-                className="text-lg indent-8 text-justify leading-relaxed"
+                className="text-base md:text-lg indent-8 text-justify leading-relaxed"
                 data-aos="fade-left"
-                
               >
                 หน้าแสดงข้อมูลโดยรวมของรายการผลิตภัณฑ์
                 โดยจะแสดงจำนวนค่าความรุนแรงของช่องโหว่ทั้งหมด
@@ -712,33 +707,30 @@ export default function Page() {
           </div>
 
           {/* ---------------- Project 6 ---------------- */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center mb-18">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center mb-12">
             <div
               className="flex justify-center md:order-2"
               data-aos="fade-left"
-              
             >
               <AntdImage.PreviewGroup preview={previewConfig(1)}>
                 <AntdImage
                   src="/images/projects_picture/project-6.jpg"
                   alt="project-6"
-                  width={400}
-                  className="rounded-md border-6 border-slate-400 cursor-pointer"
+                  width={360}
+                  className="rounded-md border-4 border-slate-400 cursor-pointer"
                 />
               </AntdImage.PreviewGroup>
             </div>
-            <div className="text-gray-300 space-y-4 md:order-1">
+            <div className="text-gray-300 space-y-3 md:order-1">
               <h3
-                className="text-2xl font-bold text-sky-400"
+                className="text-xl font-bold text-sky-400"
                 data-aos="fade-right"
-                
               >
                 ตัวอย่างการส่งแจ้งเตือนทางอีเมล
               </h3>
               <p
-                className="text-lg indent-8 text-justify leading-relaxed"
+                className="text-base md:text-lg indent-8 text-justify leading-relaxed"
                 data-aos="fade-right"
-                
               >
                 ตัวอย่างการส่งแจ้งเตือนทางอีเมล เมื่อมีช่องโหว่ใหม่ถูกค้นพบ
                 และช่องโหว่ใหม่มีผลกระทบกับรายการผลิตภัณฑ์ที่ผู้ใช้ติดตามไว้

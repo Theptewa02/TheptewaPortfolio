@@ -6,6 +6,23 @@ body {
   @apply bg-slate-800;
 }
 
+.font-audiowide {
+  font-family: var(--font-audiowide), sans-serif;
+}
+
+.font-kodemono {
+  font-family: var(--font-kodemono), monospace;
+}
+
+.en-title {
+  @apply text-4xl sm:text-6xl lg:text-8xl;
+}
+
+.th-title {
+  @apply text-2xl sm:text-4xl lg:text-6xl;
+}
+
+
 @custom-variant dark (&:is(.dark *));
 
 :root {
@@ -123,8 +140,12 @@ body {
 }
 
 @keyframes rotate {
-  from { --angle: 0deg; }
-  to { --angle: 360deg; }
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
 }
 
 .glow-text {
@@ -132,11 +153,28 @@ body {
   display: block;
   font-weight: 800;
   color: transparent;
-  background: conic-gradient(from var(--angle), #2b7fff, #00bcff, #53eafd, #00bcff, #2b7fff);
+  background: conic-gradient(
+    from var(--angle),
+    #2b7fff,
+    #00bcff,
+    #53eafd,
+    #00bcff,
+    #2b7fff
+  );
   background-clip: text;
   -webkit-background-clip: text;
   animation: rotate 3s linear infinite;
 }
+.glow-underline::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 4px;
+  margin: 0.5rem auto 0;
+  background: linear-gradient(90deg, #2b7fff, #53eafd, #2b7fff);
+  border-radius: 2px;
+}
+
 
 .hide-scrollbar {
   -ms-overflow-style: none;

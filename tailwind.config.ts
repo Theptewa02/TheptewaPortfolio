@@ -12,6 +12,7 @@ module.exports = {
         audiowide: ["var(--font-audiowide)", "sans-serif"],
         kodemono: ["var(--font-kodemono)", "monospace"],
       },
+      
     },
   },
   plugins: [
