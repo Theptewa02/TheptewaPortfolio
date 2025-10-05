@@ -70,28 +70,28 @@ export default function Page() {
   // ----------------- Contacts -----------------
   const contacts = [
     {
-      icon: <SiFacebook className="w-6 h-6" />,
+      icon: <SiFacebook className="lg:w-6 lg:h-6 md:w-5 md:h-5 w-4 h-4" />,
       url: "https://facebook.com/game.theptewa",
       label: "Facebook",
       color:
         "hover:bg-blue-600 hover:shadow-[0_0_20px_#2563eb] hover:shadow-blue-500/70",
     },
     {
-      icon: <SiLine className="w-6 h-6" />,
+      icon: <SiLine className="lg:w-6 lg:h-6 md:w-5 md:h-5 w-4 h-4" />,
       url: "https://line.me/ti/p/y1rgmFMb6n",
       label: "Line",
       color:
         "hover:bg-green-500 hover:shadow-[0_0_20px_#22c55e] hover:shadow-green-400/70",
     },
     {
-      icon: <SiGmail className="w-6 h-6" />,
+      icon: <SiGmail className="lg:w-6 lg:h-6 md:w-5 md:h-5 w-4 h-4" />,
       url: "mailto:theptewa.phuthachat@gmail.com",
       label: "Gmail",
       color:
         "hover:bg-red-500 hover:shadow-[0_0_20px_#ef4444] hover:shadow-red-400/70",
     },
     {
-      icon: <FaPhone className="w-6 h-6" />,
+      icon: <FaPhone className="lg:w-6 lg:h-6 md:w-5 md:h-5 w-4 h-4" />,
       url: "tel:+66808352670",
       label: "Telephone",
       color:
@@ -240,26 +240,27 @@ export default function Page() {
       {/* -------- Home -------- */}
       <section
         id="home"
-        className="min-h-screen flex items-center justify-center px-6"
+        className="min-h-screen flex items-center justify-center px-16 py-16"
       >
-        <div className="max-w-6xl mx-auto grid md:grid-cols-[3fr_2fr] gap-10 items-center">
+        <div className="lg:max-w-6xl md:max-w-4xl sm:max-w-xl mx-auto grid md:grid-cols-[3fr_2fr] gap-10 items-center">
           {/* รูปภาพ */}
           <div className="flex justify-center lg:justify-end order-1 md:order-2">
-            <Image
-              src="/images/Theptewa_img.jpg"
-              alt="Theptewa"
-              width={350}
-              height={350}
-              className="rounded-full object-cover shadow-xl shadow-sky-600/60 border-4 border-sky-600"
-              priority
-              data-aos="fade-up"
-            />
+            <div className="relative lg:w-[300px] lg:h-[300px] md:w-[250px] md:h-[250px] w-[200px] h-[200px]">
+              <Image
+                src="/images/Theptewa_img.jpg"
+                alt="Theptewa"
+                fill
+                className="rounded-full object-cover shadow-xl shadow-sky-600/60 border-4 border-sky-600"
+                priority
+                data-aos="fade-up"
+              />
+            </div>
           </div>
 
           {/* ข้อความ */}
           <GlowBorder className="order-2 md:order-1">
-            <div className="text-center md:text-left max-w-2xl">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-600 min-h-[100px] font-audiowide">
+            <div className="md:text-left text-center max-w-2xl">
+              <h1 className="lg:text-[30px] lg:min-h-[100px] md:text-[22px] md:min-h-[70px] text-[17px] min-h-[60px] font-bold text-slate-600 font-audiowide">
                 <TextType
                   text={[
                     "สวัสดีครับ!\nผม เทพเทวา พุทธชาติ",
@@ -273,31 +274,31 @@ export default function Page() {
               </h1>
 
               <h1
-                className="text-lg sm:text-xl md:text-2xl text-slate-300 mt-4 mb-2"
+                className="lg:text-[16px] md:text-[14px] text-[12px] text-slate-300 mt-4 mb-2"
                 data-aos="fade-up"
               >
                 อยากสมัครงานในตำแหน่ง
               </h1>
 
               <h2
-                className="text-lg sm:text-xl md:text-2xl font-semibold bg-gradient-to-r from-blue-600 via-sky-400 to-cyan-400 bg-clip-text text-transparent mb-6 font-audiowide"
+                className="lg:text-[18px] md:text-[17px] text-[16px] font-semibold bg-gradient-to-r from-blue-600 via-sky-400 to-cyan-400 bg-clip-text text-transparent mb-6 font-audiowide"
                 data-aos="fade-up"
                 data-aos-delay={50}
               >
-                Full Stack Developer | Software Developer
+                Full Stack Developer or Software Developer
               </h2>
 
               <p
-                className="text-sm sm:text-base md:text-[15.5px] leading-relaxed text-justify indent-8 text-slate-300"
+                className="lg:text-[16px] md:text-[14px] text-[12px] leading-relaxed md:indent-8 text-slate-300"
                 data-aos="fade-up"
                 data-aos-delay={50}
               >
                 ผมเป็นนักศึกษาจบใหม่ มีความชื่นชอบในการทำงานสายโปรแกรมเมอร์
-                ชื่นชอบการเขียนโค้ด การคิดเชิงตรรกะ
+                การเขียนโค้ด การคิดเชิงตรรกะ 
                 และการออกแบบระบบให้ทำงานได้อย่างถูกต้อง
               </p>
               <p
-                className="text-sm sm:text-base md:text-[15.5px] leading-relaxed text-justify indent-8 text-slate-300"
+                className="lg:text-[16px] md:text-[14px] text-[12px] leading-relaxed md:indent-8 text-slate-300"
                 data-aos="fade-up"
                 data-aos-delay={50}
               >
@@ -329,10 +330,7 @@ export default function Page() {
       </section>
 
       {/* -------- Education -------- */}
-      <section
-        id="education"
-        className="min-h-screen flex items-center justify-center px-6"
-      >
+      <section id="education" className="flex items-center justify-center px-6">
         <div className="max-w-full mx-auto">
           {/* หัวข้อหลัก */}
           <h2
@@ -396,10 +394,7 @@ export default function Page() {
       </section>
 
       {/* -------- Skills -------- */}
-      <section
-        id="skills"
-        className="min-h-screen flex items-center justify-center px-6"
-      >
+      <section id="skills" className="flex items-center justify-center px-6">
         <div className="max-w-full mx-auto">
           {/* หัวข้อหลัก */}
           <h2
