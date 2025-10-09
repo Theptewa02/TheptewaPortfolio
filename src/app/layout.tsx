@@ -3,18 +3,18 @@ import { Bai_Jamjuree, Audiowide, Kode_Mono } from "next/font/google";
 import "./globals.css";
 
 const baiJamjuree = Bai_Jamjuree({
-  subsets: ["latin", "thai"], // ใส่ thai ด้วยเพื่อรองรับภาษาไทย
+  subsets: ["latin", "thai"], // รองรับภาษาไทย
   variable: "--font-bai-jamjuree",
-  weight: ["300", "400", "500", "600", "700"], // ใส่น้ำหนักที่ใช้จริง
+  weight: ["300", "400", "500", "600", "700"],
 });
 
-export const audiowide = Audiowide({
+const audiowide = Audiowide({
   weight: "400",
   subsets: ["latin"],
-  variable: "--font-audiowide", // สร้างเป็น CSS variable
+  variable: "--font-audiowide",
 });
 
-export const kodeMono = Kode_Mono({
+const kodeMono = Kode_Mono({
   weight: ["400", "700"],
   subsets: ["latin"],
   variable: "--font-kodemono",
@@ -22,7 +22,8 @@ export const kodeMono = Kode_Mono({
 
 export const metadata: Metadata = {
   title: "Portfolio | Theptewa",
-  description: "Personal portfolio website built with Next.js, TailwindCSS, and shadcn/ui",
+  description:
+    "Personal portfolio website built with Next.js, TailwindCSS, and shadcn/ui",
 };
 
 export default function RootLayout({
@@ -32,7 +33,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${baiJamjuree.variable} ${audiowide.variable} ${kodeMono.variable} font-sans antialiased`}>
+      <body
+        className={`${baiJamjuree.variable} ${audiowide.variable} ${kodeMono.variable} font-sans antialiased`}
+      >
         {children}
       </body>
     </html>
