@@ -236,16 +236,16 @@ export default function Page() {
   });
 
   return (
-    <main className="space-y-32">
+    <main className="space-y-32 overflow-x-hidden">
       {/* -------- Home -------- */}
       <section
         id="home"
-        className="min-h-screen flex items-center justify-center px-16 py-16"
+        className="min-h-screen flex items-center justify-center px-6"
       >
-        <div className="lg:max-w-6xl md:max-w-4xl sm:max-w-xl mx-auto grid md:grid-cols-[3fr_2fr] gap-10 items-center">
+        <div className="lg:max-w-5xl md:max-w-4xl max-w-xl mx-auto grid md:grid-cols-[3fr_2fr] gap-6 items-center">
           {/* รูปภาพ */}
           <div className="flex justify-center lg:justify-end order-1 md:order-2">
-            <div className="relative lg:w-[300px] lg:h-[300px] md:w-[250px] md:h-[250px] w-[200px] h-[200px]">
+            <div className="relative lg:w-[350px] lg:h-[350px] md:w-[250px] md:h-[250px] w-[200px] h-[200px]">
               <Image
                 src="/images/Theptewa_img.jpg"
                 alt="Theptewa"
@@ -372,17 +372,17 @@ export default function Page() {
 
                 {/* เนื้อหา */}
                 <div className="text-center md:text-left space-y-2 px-2">
-                  <span className="text-sm sm:text-base md:text-md font-bold text-sky-400">
+                  <span className="lg:text-[18px] md:text-[16px] text-[14px] font-bold text-sky-400">
                     {edu.year}
                   </span>
-                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-sky-400">
+                  <h3 className="lg:text-[24px] md:text-[20px] text-[16px] font-bold text-sky-400">
                     {edu.place}
                   </h3>
-                  <p className="text-base sm:text-lg md:text-xl text-slate-200">
+                  <p className="lg:text-[20px] md:text-[16px] text-[12px] text-slate-200">
                     {edu.education} - {edu.branch}
                   </p>
                   <p>
-                    <span className="inline-block bg-blue-200 text-blue-700 font-semibold px-3 py-1 rounded-full shadow-md shadow-cyan-400/50 text-sm sm:text-base">
+                    <span className="lg:text-[18px] md:text-[16px] text-[14px] inline-block bg-blue-200 text-blue-700 font-semibold px-3 py-1 rounded-full shadow-md shadow-cyan-400/50">
                       เกรดเฉลี่ย {edu.gpa}
                     </span>
                   </p>
@@ -429,12 +429,12 @@ export default function Page() {
                   </div>
 
                   {/* Title */}
-                  <span className="text-white mt-2 font-audiowide text-xs sm:text-sm md:text-base">
+                  <span className="lg:text-[18px] md:text-[16px] text-[14px] text-white mt-2 font-audiowide ">
                     {item.title}
                   </span>
 
                   {/* Category */}
-                  <span className="text-sky-400 font-audiowide text-[10px] sm:text-xs md:text-sm">
+                  <span className="lg:text-[16px] md:text-[14px] text-[12px] text-sky-400 font-audiowide">
                     {item.category}
                   </span>
                 </div>
@@ -464,10 +464,10 @@ export default function Page() {
           {/* ---------------- Intro Project ---------------- */}
           <div>
             <h3
-              className="text-xl md:text-2xl font-bold mb-6 text-sky-400 text-center font-audiowide"
+              className="lg:text-[28px] md:text-[22px] text-[18px] font-semibold mb-6 text-sky-400 text-center font-audiowide"
               data-aos="fade-up"
             >
-              VULNERABILITY SEARCH AND TRACKING SYSTEM
+              VULNERABILITY SEARCH AND TRACKING SYSTEM <br/>
               (ระบบค้นหาและติดตามช่องโหว่)
             </h3>
             <Image
@@ -479,14 +479,14 @@ export default function Page() {
               data-aos="fade-up"
             />
             <p
-              className="mb-8 text-gray-300 text-base md:text-lg indent-8 text-justify leading-relaxed max-w-4xl mx-auto"
+              className="lg:text-[26px] md:text-[20px] text-[16px] md:indent-10 indent-4.5 mb-8 text-gray-300 text-justify leading-relaxed mx-auto"
               data-aos="fade-up"
             >
               โปรเจกต์ที่พัฒนาเพื่อใช้ในการค้นหาและติดตามข้อมูลช่องโหว่
               (Vulnerability) โดยทางฝั่ง Frontend ได้ใช้ Next.js และ Tailwind
               CSS ในการพัฒนา ส่วนทางฝั่ง Backend ได้ใช้ Node.js กับ Python
               ร่วมกับ FastAPI และใช้ฐานข้อมูล MongoDB ในการจัดเก็บข้อมูล
-              ซึ่งภายหลังได้มีการพัฒนาระบบแจ้งเตือนทางอีเมลอัตโนมัติหาผู้ใช้
+              ซึ่งภายหลังได้มีการเพิ่มฟังก์ชัน ส่งแจ้งเตือนทางอีเมลอัตโนมัติหาผู้ใช้
               เมื่อมีช่องโหว่ใหม่ที่มีผลกระทบกับผลิตภัณฑ์ที่ผู้ใช้ติดตามอยู่ถูกค้นพบ
             </p>
           </div>
@@ -521,13 +521,13 @@ export default function Page() {
             </div>
             <div className="text-gray-300 space-y-3 md:order-2">
               <h3
-                className="text-xl font-bold text-sky-400 font-audiowide"
+                className="lg:text-[22px] md:text-[20px] text-[18px] font-semibold text-sky-400 font-audiowide"
                 data-aos="fade-left"
               >
                 หน้า CVE Statistics / API
               </h3>
               <p
-                className="text-base md:text-lg indent-8 text-justify leading-relaxed"
+                className="lg:text-[20px] md:text-[18px] text-[16px] md:indent-10 indent-4.5 text-justify leading-relaxed"
                 data-aos="fade-left"
               >
                 หน้าหลักของระบบ ซึ่งจะแสดงข้อมูลสถิติของช่องโหว่
@@ -568,13 +568,13 @@ export default function Page() {
             </div>
             <div className="text-gray-300 space-y-3 md:order-1">
               <h3
-                className="text-xl font-bold text-sky-400 font-audiowide"
+                className="lg:text-[22px] md:text-[20px] text-[18px] font-semibold text-sky-400 font-audiowide"
                 data-aos="fade-right"
               >
                 หน้า All CVEs / API
               </h3>
               <p
-                className="text-base md:text-lg indent-8 text-justify leading-relaxed"
+                className="lg:text-[20px] md:text-[18px] text-[16px] md:indent-10 indent-4.5 text-justify leading-relaxed"
                 data-aos="fade-right"
               >
                 หน้าแสดงรายการข้อมูล CVE หรือช่องโหว่ทั้งหมดที่ถูกบันทึกไว้
@@ -616,13 +616,13 @@ export default function Page() {
             </div>
             <div className="text-gray-300 space-y-3 md:order-2">
               <h3
-                className="text-xl font-bold text-sky-400 font-audiowide"
+                className="lg:text-[22px] md:text-[20px] text-[18px] font-semibold text-sky-400 font-audiowide"
                 data-aos="fade-left"
               >
                 หน้า Products / API
               </h3>
               <p
-                className="text-base md:text-lg indent-8 text-justify leading-relaxed"
+                className="lg:text-[20px] md:text-[18px] text-[16px] md:indent-10 indent-4.5 text-justify leading-relaxed"
                 data-aos="fade-left"
               >
                 หน้าแสดงรายการผลิตภัณฑ์ทั้งหมด
@@ -650,13 +650,13 @@ export default function Page() {
             </div>
             <div className="text-gray-300 space-y-3 md:order-1">
               <h3
-                className="text-xl font-bold text-sky-400 font-audiowide"
+                className="lg:text-[22px] md:text-[20px] text-[18px] font-semibold text-sky-400 font-audiowide"
                 data-aos="fade-right"
               >
                 หน้า Watch List
               </h3>
               <p
-                className="text-base md:text-lg indent-8 text-justify leading-relaxed"
+                className="lg:text-[20px] md:text-[18px] text-[16px] md:indent-10 indent-4.5 text-justify leading-relaxed"
                 data-aos="fade-right"
               >
                 หน้าแสดงรายการผลิตภัณฑ์ที่ผู้ใช้ติดตามการแจ้งเตือนไว้ทั้งหมด
@@ -684,13 +684,13 @@ export default function Page() {
             </div>
             <div className="text-gray-300 space-y-3 md:order-2">
               <h3
-                className="text-xl font-bold text-sky-400 font-audiowide"
+                className="lg:text-[22px] md:text-[20px] text-[18px] font-semibold text-sky-400 font-audiowide"
                 data-aos="fade-left"
               >
                 หน้าข้อมูลโดยรวมของรายการผลิตภัณฑ์
               </h3>
               <p
-                className="text-base md:text-lg indent-8 text-justify leading-relaxed"
+                className="lg:text-[20px] md:text-[18px] text-[16px] md:indent-10 indent-4.5 text-justify leading-relaxed"
                 data-aos="fade-left"
               >
                 หน้าแสดงข้อมูลโดยรวมของรายการผลิตภัณฑ์
@@ -718,13 +718,13 @@ export default function Page() {
             </div>
             <div className="text-gray-300 space-y-3 md:order-1">
               <h3
-                className="text-xl font-bold text-sky-400"
+                className="lg:text-[22px] md:text-[20px] text-[18px] font-semibold text-sky-400"
                 data-aos="fade-right"
               >
                 ตัวอย่างการส่งแจ้งเตือนทางอีเมล
               </h3>
               <p
-                className="text-base md:text-lg indent-8 text-justify leading-relaxed"
+                className="lg:text-[20px] md:text-[18px] text-[16px] md:indent-10 indent-4.5 text-justify leading-relaxed"
                 data-aos="fade-right"
               >
                 ตัวอย่างการส่งแจ้งเตือนทางอีเมล เมื่อมีช่องโหว่ใหม่ถูกค้นพบ

@@ -16,11 +16,11 @@ body {
 }
 
 .en-title {
-  @apply text-4xl sm:text-6xl lg:text-8xl;
+  @apply lg:text-8xl md:text-6xl text-4xl;
 }
 
 .th-title {
-  @apply text-2xl sm:text-4xl lg:text-6xl;
+  @apply lg:text-6xl md:text-4xl text-2xl;
 }
 
 
