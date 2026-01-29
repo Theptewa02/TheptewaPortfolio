@@ -294,7 +294,7 @@ export default function Page() {
                 data-aos-delay={50}
               >
                 ผมเป็นนักศึกษาจบใหม่ มีความชื่นชอบในการทำงานสายโปรแกรมเมอร์
-                การเขียนโค้ด การคิดเชิงตรรกะ 
+                การเขียนโค้ด การคิดเชิงตรรกะ
                 และการออกแบบระบบให้ทำงานได้อย่างถูกต้อง
               </p>
               <p
@@ -467,7 +467,7 @@ export default function Page() {
               className="lg:text-[28px] md:text-[22px] text-[18px] font-semibold mb-6 text-sky-400 text-center font-audiowide"
               data-aos="fade-up"
             >
-              VULNERABILITY SEARCH AND TRACKING SYSTEM <br/>
+              VULNERABILITY SEARCH AND TRACKING SYSTEM <br />
               (ระบบค้นหาและติดตามช่องโหว่)
             </h3>
             <Image
@@ -486,7 +486,8 @@ export default function Page() {
               (Vulnerability) โดยทางฝั่ง Frontend ได้ใช้ Next.js และ Tailwind
               CSS ในการพัฒนา ส่วนทางฝั่ง Backend ได้ใช้ Node.js กับ Python
               ร่วมกับ FastAPI และใช้ฐานข้อมูล MongoDB ในการจัดเก็บข้อมูล
-              ซึ่งภายหลังได้มีการเพิ่มฟังก์ชัน ส่งแจ้งเตือนทางอีเมลอัตโนมัติหาผู้ใช้
+              ซึ่งภายหลังได้มีการเพิ่มฟังก์ชัน
+              ส่งแจ้งเตือนทางอีเมลอัตโนมัติหาผู้ใช้
               เมื่อมีช่องโหว่ใหม่ที่มีผลกระทบกับผลิตภัณฑ์ที่ผู้ใช้ติดตามอยู่ถูกค้นพบ
             </p>
           </div>
@@ -735,6 +736,77 @@ export default function Page() {
           </div>
         </div>
       </section>
+      <footer className="mt-32 border-t border-slate-700/50 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+        <div className="max-w-6xl mx-auto px-6 py-12 grid gap-8 md:grid-cols-3 text-slate-300">
+          {/* Branding */}
+          <div className="space-y-4">
+            <h3 className="text-xl font-audiowide text-sky-400">
+              Theptewa Portfolio
+            </h3>
+            <p className="text-sm leading-relaxed text-slate-400">
+              Personal portfolio website showcasing projects, skills and
+              experience in modern web development.
+            </p>
+          </div>
+
+          {/* Tech Stack */}
+          <div className="space-y-4">
+            <h4 className="text-lg font-semibold text-sky-400 font-audiowide">
+              Tech Stack
+            </h4>
+
+            <div className="flex flex-wrap gap-2 text-xs">
+              {[
+                "Next.js",
+                "React",
+                "TailwindCSS",
+                "Ant Design",
+                "shadcn/ui",
+                "React Bits",
+                "Node.js",
+                "TypeScript",
+                "AOS",
+              ].map((tech, i) => (
+                <span
+                  key={i}
+                  className="px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-300 hover:border-sky-400 hover:text-sky-400 transition"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Contact */}
+          <div className="space-y-4">
+            <h4 className="text-lg font-semibold text-sky-400 font-audiowide">
+              Contact
+            </h4>
+            <ul className="space-y-2 text-sm text-slate-400">
+              <li>📧 theptewa.phuthachat@gmail.com</li>
+              <li>📱 080-835-2670</li>
+              <li>🌐 github.com/Thepteawa02</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Bottom bar */}
+        <div className="border-t border-slate-800/60 py-6 text-center text-xs text-slate-500 space-y-2">
+          <p>
+            © {new Date().getFullYear()} Theptewa Phuttachat. All rights
+            reserved.
+          </p>
+
+          <p className="text-slate-400">
+            Designed & Developed by{" "}
+            <span className="text-sky-400 font-semibold">
+              Theptewa Phuttachat
+            </span>{" "}
+            — Assisted by{" "}
+            <span className="text-emerald-400 font-semibold">ChatGPT (AI)</span>
+          </p>
+        </div>
+      </footer>
     </main>
   );
 }
