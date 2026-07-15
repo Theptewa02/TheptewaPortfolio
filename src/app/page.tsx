@@ -1,22 +1,3 @@
-// "use client";
-
-// import HomePage from "@/app/components/HomePage";
-// import EducationPage from "@/app/components/EducationPage";
-// import SkillsPage from "@/app/components/SkillsPage";
-// import ProjectPage from "@/app/components/ProjectPage";
-// import ContactPage from "@/app/components/ContactPage";
-
-// export default function Page() {
-//   return (
-//     <main className="overflow-y-scroll hide-scrollbar h-screen">
-//       <div id="home" className="mb-22"><HomePage /></div>
-//       <div id="education" className="mb-22"><EducationPage /></div>
-//       <div id="skills" className="mb-22"><SkillsPage /></div>
-//       <div id="projects" className="mb-22"><ProjectPage /></div>
-//     </main>
-//   );
-// }
-
 "use client";
 
 import { useEffect } from "react";
@@ -260,32 +241,28 @@ export default function Page() {
           {/* ข้อความ */}
           <GlowBorder className="order-2 md:order-1">
             <div className="md:text-left text-center max-w-2xl">
-              <h1 className="lg:text-[30px] lg:min-h-[100px] md:text-[22px] md:min-h-[70px] text-[17px] min-h-[60px] font-bold text-slate-600 font-audiowide">
-                <TextType
-                  text={[
-                    "สวัสดีครับ!\nผม เทพเทวา พุทธชาติ",
-                    "Hello!\nI'm Theptewa Phuttachat",
-                  ]}
-                  typingSpeed={70}
-                  pauseDuration={1500}
-                  showCursor={false}
-                  data-aos="fade-up"
-                />
+              <h1 className="lg:text-[30px] lg:min-h-[100px] md:text-[22px] md:min-h-[70px] text-[17px] min-h-[60px] font-bold text-slate-300 font-audiowide">
+                สวัสดีครับ!<br></br>ผม เทพเทวา พุทธชาติ
               </h1>
 
               <h1
                 className="lg:text-[16px] md:text-[14px] text-[12px] text-slate-300 mt-4 mb-2"
                 data-aos="fade-up"
               >
-                อยากสมัครงานในตำแหน่ง
+                สนใจทำงานในตำแหน่ง
               </h1>
 
               <h2
-                className="lg:text-[18px] md:text-[17px] text-[16px] font-semibold bg-gradient-to-r from-blue-600 via-sky-400 to-cyan-400 bg-clip-text text-transparent mb-6 font-audiowide"
+                className="lg:text-[18px] md:text-[17px] text-[16px] font-semibold text-sky-400 mb-6 font-audiowide"
                 data-aos="fade-up"
                 data-aos-delay={50}
               >
-                Full Stack Developer or Software Developer
+                <TextType 
+                text={["Full Stack Developer", "Software Developer", "Frontend/Backend Developer"]}
+                typingSpeed={50}
+                pauseDuration={1600}
+                showCursor={false}
+              />
               </h2>
 
               <p
@@ -303,9 +280,7 @@ export default function Page() {
                 data-aos-delay={50}
               >
                 มีประสบการณ์ฝึกงานด้าน Backend และกำลังศึกษาเทคโนโลยีฝั่ง
-                Frontend ด้วยตัวเอง เพื่อ
-                เสริมทักษะและเตรียมพร้อมสู่การทำงานในตำแหน่ง Full Stack
-                Developer อย่างมีประสิทธิภาพ
+                Frontend ด้วยตัวเอง เพื่อเสริมทักษะตัวเองและเติบโตในสายงาน Developer
               </p>
 
               <div className="flex gap-4 mt-6 justify-center md:justify-start">
@@ -785,7 +760,7 @@ export default function Page() {
             <ul className="space-y-2 text-sm text-slate-400">
               <li>📧 theptewa.phuthachat@gmail.com</li>
               <li>📱 080-835-2670</li>
-              <li>🌐 github.com/Thepteawa02</li>
+              <li>🌐 github.com/Theptewa02</li>
             </ul>
           </div>
         </div>
