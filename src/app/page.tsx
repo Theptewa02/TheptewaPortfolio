@@ -241,7 +241,8 @@ export default function Page() {
           {/* ข้อความ */}
           <GlowBorder className="order-2 md:order-1">
             <div className="md:text-left text-center max-w-2xl">
-              <h1 className="lg:text-[30px] lg:min-h-[100px] md:text-[22px] md:min-h-[70px] text-[17px] min-h-[60px] font-bold text-slate-300 font-audiowide">
+              <h1 className="lg:text-[30px] lg:min-h-[100px] md:text-[22px] md:min-h-[70px] text-[17px] min-h-[60px] font-bold text-slate-300 font-audiowide"
+                data-aos="fade-up">
                 สวัสดีครับ!<br></br>ผม เทพเทวา พุทธชาติ
               </h1>
 
